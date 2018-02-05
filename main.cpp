@@ -7,6 +7,7 @@ int main (){
 
     std::cout << "Enter how many prime number you would like to get:" << std::endl;
     std::cin >> number;
+    std::cin.ignore();
 
     for (unsigned long int i = 1; i <= number; ){
         print = true;
@@ -14,7 +15,6 @@ int main (){
             std::cout << i << ". - " << prime << std::endl;
             i++;
             prime++;
-            print = false;
         } else {
             for(unsigned long int z = 3; z < prime; z += 2){
                 if (prime % z == 0){
@@ -28,4 +28,5 @@ int main (){
             prime += 2;
         }
     }
+    std::cin.get();
 }
